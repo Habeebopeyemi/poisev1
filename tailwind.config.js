@@ -11,6 +11,7 @@ module.exports = {
         descr: "#66666E",
         social: "#D9D9D9",
         social_text: "#66666E",
+        gallery: "#E6E6E9",
       },
     },
   },

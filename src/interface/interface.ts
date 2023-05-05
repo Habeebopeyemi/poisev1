@@ -7,10 +7,10 @@ export interface Size {
   width: number;
   height: number;
 }
-export interface IImage{
+export interface IImage {
   src: string;
   alt: string;
-  id: number
+  id: number;
 }
 export interface IItems {
   id: number;
@@ -18,4 +18,16 @@ export interface IItems {
   price: number;
   description: string;
   src: string;
-  }
+  viewProductHandler: () => void;
+}
+export interface IProduct {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  src: string;
+}
+export interface IButton {
+  text: string;
+  onclick?: () => void;
+}

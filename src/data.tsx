@@ -1,6 +1,5 @@
 import product1 from "assets/img/IMG_0357 1.png";
 import product2 from "assets/img/IMG_7845 1.png";
-import product3 from "assets/img/IMG_8119 2.png";
 import product4 from "assets/img/JPG 1.png";
 import product5 from "assets/img/JPG 2.png";
 export const header_info = [
@@ -33,11 +32,6 @@ export const images_arr = [
     id: Math.random() * 100,
   },
   {
-    src: product3,
-    alt: "poise" + Math.random(),
-    id: Math.random() * 100,
-  },
-  {
     src: product4,
     alt: "poise" + Math.random(),
     id: Math.random() * 100,
@@ -64,13 +58,7 @@ export const gallery = [
     description: "Description of the product is inserted here for customers to",
     src: product2,
   },
-  {
-    id: Math.random() * 200,
-    name: "Poise leather purse",
-    price: 370,
-    description: "Description of the product is inserted here for customers to",
-    src: product3,
-  },
+
   {
     id: Math.random() * 200,
     name: "Poise leather purse",
@@ -99,13 +87,7 @@ export const gallery = [
     description: "Description of the product is inserted here for customers to",
     src: product2,
   },
-  {
-    id: Math.random() * 200,
-    name: "Poise leather purse",
-    price: 370,
-    description: "Description of the product is inserted here for customers to",
-    src: product3,
-  },
+
   {
     id: Math.random() * 200,
     name: "Poise leather purse",
