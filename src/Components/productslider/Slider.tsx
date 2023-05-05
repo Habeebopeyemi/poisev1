@@ -1,9 +1,43 @@
-import React from 'react'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+import type { IImage } from "interface/interface";
+import "swiper/css";
+import "swiper/css/pagination";
+import "App.css";
+import { images_arr } from "data";
 
-const Slider = () => {
+
+
+const Slider: React.FC = () => {
   return (
-    <div>Slider</div>
-  )
-}
+    <>
+      <div className="w-full h-[70vh]">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          // className="mySwiper"
+        >
+          {images_arr.map((pic: IImage) => {
+            return (
+              <SwiperSlide key={pic.id}>
+                <img src={pic.src} alt={pic.alt} loading="lazy" />
+              </SwiperSlide>
+            );
+          })}
 
-export default Slider
+          {/* <SwiperSlide>
+            <img src={product2} alt="product 2" loading="lazy" />
+          </SwiperSlide> */}
+        </Swiper>
+      </div>
+    </>
+  );
+};
+
+export default Slider;
