@@ -2,6 +2,11 @@ import product1 from "assets/img/IMG_0357 1.png";
 import product2 from "assets/img/IMG_7845 1.png";
 import product4 from "assets/img/JPG 1.png";
 import product5 from "assets/img/JPG 2.png";
+
+import social1 from "assets/img/Ellipse 1.png";
+import platform1 from "assets/img/Vector.png";
+import social2 from "assets/img/Ellipse 5.png";
+import platform2 from "assets/img/Vector2.png";
 export const header_info = [
   {
     id: 1,
@@ -101,5 +106,40 @@ export const gallery = [
     price: 370,
     description: "Description of the product is inserted here for customers to",
     src: product5,
+  },
+];
+
+export const feedback = [
+  {
+    id: Math.random() * 200,
+    handle: "@mehxii",
+    comment:
+      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+    src: social1,
+    platform: platform1,
+  },
+  {
+    id: Math.random() * 200,
+    handle: "@mehxii",
+    comment:
+      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+    src: social2,
+    platform: platform2,
+  },
+  {
+    id: Math.random() * 200,
+    handle: "@mehxii",
+    comment:
+      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+    src: social1,
+    platform: platform1,
+  },
+  {
+    id: Math.random() * 200,
+    handle: "@mehxii",
+    comment:
+      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+    src: social2,
+    platform: platform2,
   },
 ];

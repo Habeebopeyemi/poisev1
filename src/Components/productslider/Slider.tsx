@@ -21,7 +21,6 @@ const Slider: React.FC = () => {
             clickable: true,
           }}
           modules={[Autoplay, Pagination]}
-          // className="mySwiper"
         >
           {images_arr.map((pic: IImage) => {
             return (
@@ -30,10 +29,6 @@ const Slider: React.FC = () => {
               </SwiperSlide>
             );
           })}
-
-          {/* <SwiperSlide>
-            <img src={product2} alt="product 2" loading="lazy" />
-          </SwiperSlide> */}
         </Swiper>
       </div>
     </>
