@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "Components/button/Button";
 import type { IItems } from "interface/interface";
 
@@ -8,7 +9,7 @@ const Card: React.FC<IItems> = ({
   description,
   price,
   src,
-  viewProductHandler,
+  // viewProductHandler,
 }) => {
   return (
     <div className="bg-card p-3 rounded-md m-3 sm:max-w-[280px] md:max-w-[300px]">
@@ -32,7 +33,9 @@ const Card: React.FC<IItems> = ({
         >
           Read more
         </a>
-        <Button text={"View Product"} onclick={viewProductHandler}/>
+        <Link to={`product/${id}`}>
+          <Button text={"View Product"} />
+        </Link>
       </div>
     </div>
   );

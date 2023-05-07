@@ -18,7 +18,7 @@ export interface IItems {
   price: number;
   description: string;
   src: string;
-  viewProductHandler: () => void;
+  // viewProductHandler: () => void;
 }
 export interface IProduct {
   id: number;
@@ -30,4 +30,12 @@ export interface IProduct {
 export interface IButton {
   text: string;
   onclick?: () => void;
+}
+export interface IDetails {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  src: string;
+  details: string;
 }
