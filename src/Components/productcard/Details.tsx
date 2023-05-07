@@ -13,7 +13,7 @@ const Details: React.FC<IDetails> = ({
   src,
 }) => {
   return (
-    <section className="max-w-[600px] mt-3 border-[2px] mx-auto rounded-md md:max-w-[95%] lg:max-w-[970px]">
+    <div className="max-w-[600px] border-[2px] border-slate-500 mx-auto rounded-md md:max-w-[95%] lg:max-w-[970px]">
       <p className="m-2 flex justify-between">
         <span></span>
         <Link to="/">
@@ -54,7 +54,7 @@ const Details: React.FC<IDetails> = ({
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
