@@ -14,7 +14,7 @@ const Feedback: React.FC<IFeedback> = ({ handle, comment, src, children }) => {
         <div className="absolute bottom-0 left-12">{children}</div>
       </div>
       <div className="basis-[80%]">
-        <h5 className="mb-3">{handle}</h5>
+        <h5 className="mb-1">{handle}</h5>
         <p className="text-social_text text-[.8rem] mb-4">{comment}</p>
       </div>
     </div>
