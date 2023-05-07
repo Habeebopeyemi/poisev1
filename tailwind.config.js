@@ -13,6 +13,10 @@ module.exports = {
         social_text: "#66666E",
         gallery: "#E6E6E9",
       },
+      backgroundImage: {
+        poise:
+          "url('https://i.ebayimg.com/images/g/QvQAAOSwvixgINGo/s-l1600.jpg')",
+      },
     },
   },
   plugins: [],
