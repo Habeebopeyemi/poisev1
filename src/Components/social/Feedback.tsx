@@ -8,7 +8,7 @@ export interface IFeedback {
 }
 const Feedback: React.FC<IFeedback> = ({ handle, comment, src, children }) => {
   return (
-    <div className="w-[80%] p-3 flex bg-social rounded-md">
+    <div className="w-[80%] p-3 flex bg-social rounded-md lg:p-6">
       <div className="mr-2 w-[70px] h-[70px] relative">
         <img src={src} alt="" className="w-full rounded-full" />
         <div className="absolute bottom-0 left-12">{children}</div>

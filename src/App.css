@@ -141,3 +141,18 @@ input[type="range"]::-webkit-range-progress {
   color: white;
   font-size: 20px;
 }
+
+@media screen and (min-width: 768px){
+.swiper-slide {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 70%;
+
+}
+}

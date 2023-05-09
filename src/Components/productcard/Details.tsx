@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "Components/button/Button";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import type { IDetails } from "interface/interface";
@@ -27,7 +26,15 @@ const Details: React.FC<IDetails> = ({
           </div>
           <div className="w-[70%] flex justify-between">
             <div className="basis-[80%]">
-              <Button text="Continue on whatsapp" />
+              <a
+                href="http://wa.me/+2348088880886"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-full font-bold bg-button p-2 rounded-md hover:bg-button_hover hover:text- md:p-3">
+                  Continue on whatsapp
+                </button>
+              </a>
             </div>
             <span className="font-bold text-xl p-2">#{id}</span>
           </div>
@@ -43,11 +50,21 @@ const Details: React.FC<IDetails> = ({
           <h4 className=" font-[500] mt-3 mb-2">Shop with us.</h4>
           <p className="text-sm text-descr">
             To shop for this item, please send us a message on{" "}
-            <a href="www.instagram.com" target="_blank" className="underline">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
               Instagram
             </a>{" "}
             or{" "}
-            <a href="www.twitter.com" target="_blank" className="underline">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
               Twitter
             </a>{" "}
             with the product number.

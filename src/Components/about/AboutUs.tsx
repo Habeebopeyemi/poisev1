@@ -3,7 +3,7 @@ import Video from "Components/video/Video";
 
 const AboutUs: React.FC = () => {
     return (
-      <div className="w-[90%] mx-auto my-8">
+      <div className="w-[90%] mx-auto mt-8">
         <div>
           <h4 className="my-3 font-bold text-lg">ABOUT US</h4>
           <p className="text-md text-descr mb-3 leading-8">
@@ -15,7 +15,7 @@ const AboutUs: React.FC = () => {
             neque. Ut pharetra, aliquet quis a auctor pellentesque donec quam.
           </p>
         </div>
-        <div className="mb-3">
+        <div className="mb-1">
           <Video />
         </div>
       </div>

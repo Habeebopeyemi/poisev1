@@ -1,13 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Card from "Components/card/Card";
 import { gallery } from "data";
 import type { IProduct } from "interface/interface";
 const Gallery: React.FC = () => {
-  const navigate = useNavigate();
-  const onClickHandler = (id: number) => {
-    navigate(`/product/${id}`);
-  };
   return (
     <div className="w-full bg-gallery">
       <div className="w-[90%] mx-auto">
