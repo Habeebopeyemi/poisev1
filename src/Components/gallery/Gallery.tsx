@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "Components/card/Card";
 import { gallery } from "data";
+import { useGetProductsQuery } from "redux/actions/services";
 import type { IProduct } from "interface/interface";
 const Gallery: React.FC = () => {
+  const { data, error, isLoading } = useGetProductsQuery("products");
   return (
     <div className="w-full bg-gallery">
       <div className="w-[90%] mx-auto">

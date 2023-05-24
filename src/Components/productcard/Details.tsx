@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import type { IDetails } from "interface/interface";
+import EditProduct from "Components/editproduct/EditProduct";
 
 const Details: React.FC<IDetails> = ({
   id,
@@ -11,6 +12,7 @@ const Details: React.FC<IDetails> = ({
   details,
   src,
 }) => {
+  const token = sessionStorage.getItem("token")
   return (
     <div className="max-w-[600px] border-[2px] border-slate-500 mx-auto rounded-md md:max-w-[95%] lg:max-w-[970px]">
       <p className="m-2 flex justify-between">
@@ -71,6 +73,7 @@ const Details: React.FC<IDetails> = ({
           </p>
         </div>
       </div>
+      {token?(<EditProduct/>):null}
     </div>
   );
 };

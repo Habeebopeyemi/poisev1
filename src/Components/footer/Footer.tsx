@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BsTwitter } from "react-icons/bs";
 import { FaInstagramSquare, FaWhatsappSquare } from "react-icons/fa";
 
@@ -21,8 +22,11 @@ const Footer: React.FC = () => {
           </span>
         </p>
       </div>
-      <div className="text-md">
+      <div className="text-md flex justify-between">
         <p>&copy; {String(year)} PoiseOA | Nigeria</p>
+        <Link to="/signin" className="text-white">
+          <button className="text-slate-500 hover:text-black">Admin</button>
+        </Link>
       </div>
     </div>
   );
