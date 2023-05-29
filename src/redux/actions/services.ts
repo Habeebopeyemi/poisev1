@@ -3,11 +3,15 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const poiseApi = createApi({
   reducerPath: "poiseApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
-  tagTypes: ["Products"],
+  tagTypes: ["Products", "Product", "Edit"],
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: (url) => `${url}`,
       providesTags: ["Products"],
+    }),
+    getProduct: builder.query({
+      query: (id) => `products/product/${id}`,
+      providesTags: ["Product"],
     }),
     postSignedIn: builder.mutation({
       query: (payload) => ({
@@ -17,11 +21,21 @@ export const poiseApi = createApi({
         headers: { "Content-type": "application/json" },
       }),
     }),
-    postEditProduct: builder.mutation({
+    postNewProduct: builder.mutation({
       query: (payload) => ({
-        url: `/${payload.url}`,
+        url: `/products/postproduct`,
         method: "POST",
-        body: payload.data,
+        body: payload,
+        headers: { "Content-type": "application/json" },
+      }),
+    }),
+    postEditProduct: builder.mutation({
+      query: ({data, id}) => ({
+        url: `products/product/${id}`,
+        providesTags: ["Products,Edit"],
+
+        method: "PUT",
+        body: data,
         headers: { "Content-type": "application/json; charset=UTF-8" },
       }),
       invalidatesTags: ["Products"],
@@ -31,6 +45,8 @@ export const poiseApi = createApi({
 
 export const {
   useGetProductsQuery,
+  useGetProductQuery,
   usePostSignedInMutation,
+  usePostNewProductMutation,
   usePostEditProductMutation,
 } = poiseApi;

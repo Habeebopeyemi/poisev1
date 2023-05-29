@@ -1,16 +1,15 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Spin, message } from "antd";
-import { useNavigate, useParams } from "react-router-dom";
-import { usePostEditProductMutation } from "redux/actions/services";
+import { usePostNewProductMutation } from "redux/actions/services";
 import UploadImage from "Components/upload/UploadImage";
 
-const EditProduct: React.FC = () => {
-  const navigate = useNavigate();
-  const { id } = useParams();
+const AddProduct = () => {
   const [file, setFile] = useState<string>("");
+  const navigate = useNavigate();
   const [payload, setPayload] = useState<Record<string, any>>({});
+  const [postNewProductMutation, { isLoading }] = usePostNewProductMutation();
 
-  const [postEditProductMutation, { isLoading }] = usePostEditProductMutation();
   const changeHandler = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -21,24 +20,26 @@ const EditProduct: React.FC = () => {
   };
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
-    // console.log(payload);
-    // console.log({ data: payload, id: id });
-    postEditProductMutation({ data: payload, id: id })
+    //    console.log(payload);
+    postNewProductMutation(payload)
       .unwrap()
       .then((res) => {
+        // console.log(res);
         message.success(res.message);
         navigate(-1);
       })
       .catch((err) => {
-        message.error(err.status);
+        message.error(err.data.message);
       });
   };
   return (
     <div className="w-full mx-auto p-3 bg-gallery">
       <div className="w-full max-w-[800px] mt-[2rem] mx-auto">
         <div className="w-[70%] mx-auto mb-5 text-center">
-          <h2 className="font-bold text-[1.5rem]">Edit product details</h2>
-          <p>kindly update the product details</p>
+          <h2 className="font-bold text-[1.5rem]">
+            Add new products for customers
+          </h2>
+          {/* <p>kindly update the product details</p> */}
         </div>
         <form
           className="w-[80%] mx-auto p-3 rounded-md border-[1px] border-button"
@@ -53,7 +54,7 @@ const EditProduct: React.FC = () => {
               name="title"
               placeholder="enter title"
               className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
-              minLength={4}
+              minLength={5}
               required
               onChange={changeHandler}
             />
@@ -79,6 +80,7 @@ const EditProduct: React.FC = () => {
             <input
               type="number"
               name="price"
+              minLength={5}
               placeholder="inser price"
               className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               required
@@ -121,13 +123,12 @@ const EditProduct: React.FC = () => {
           <div>
             <UploadImage setFile={setFile} />
           </div>
-          <button className="w-full my-8 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
-            {isLoading ? <Spin size="large" /> : "update"}
+          <button className="w-full my-8 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3 text-center">
+            {isLoading ? <Spin /> : "Add product"}
           </button>
         </form>
       </div>
     </div>
   );
 };
-
-export default EditProduct;
+export default AddProduct;

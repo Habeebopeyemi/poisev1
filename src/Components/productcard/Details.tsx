@@ -21,7 +21,8 @@ const Details: React.FC<IDetails> = ({
   details,
   src,
 }) => {
-  const token = sessionStorage.getItem("token")
+  const token = sessionStorage.getItem("token");
+  console.log(src);
   return (
     <div className="max-w-[600px] border-[2px] border-slate-500 mx-auto rounded-md md:max-w-[95%] lg:max-w-[970px]">
       <p className="m-2 flex justify-between">
@@ -82,7 +83,7 @@ const Details: React.FC<IDetails> = ({
           </p>
         </div>
       </div>
-      {token?(<EditProduct/>):null}
+      {token ? <EditProduct /> : null}
     </div>
   );
 };

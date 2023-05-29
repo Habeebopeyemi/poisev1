@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Upload, Button } from "antd";
+import { Upload, message, Button } from "antd";
 import { BsFillImageFill } from "react-icons/bs";
 import type { UploadProps, UploadFile } from "antd/es/upload/interface";
 import type { UploadChangeParam } from "antd/es/upload/interface";
@@ -19,38 +19,24 @@ const UploadImage: React.FC<IDocumentUploadProps> = ({ setFile }) => {
     }
 
     if (info.file.status === "done") {
-      console.log(info.fileList[0].response)
-      const { path } = info.fileList[0].response.data;
-      setFile(path);
+      // console.log(info.file);
+      setUploading(false);
+      message.success(
+        `${info.file.name} file uploaded successfully, copy and paste the link to the image part of the form`
+      );
+      setFile(info.file.response.url);
     }
   };
 
   const props = {
+    name: "file",
     action: "http://localhost:8080/products/image",
     headers: {
       authorization: `Bearer ${sessionStorage.getItem("token")}`,
-      // accept: "application/json",
+      // "Content-Type": "multipart/form-data",
     },
     onChange: onChangeHandler,
-    multiple: true,
-    // concept exploration
-    customRequest: (options:any) => {
-      const formData = new FormData();
-      formData.append(options.filename, options.file);
-
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", options.action, true);
-      xhr.setRequestHeader("authorization", options.headers.authorization);
-      xhr.setRequestHeader("Content-Type", "multipart/form-data");
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-          options.onSuccess({},xhr)
-        }
-      }
-
-      xhr.send(formData)
-    },
+    multiple: false,
   };
   return (
     <>

@@ -21,11 +21,11 @@ export interface IItems {
   // viewProductHandler: () => void;
 }
 export interface IProduct {
-  id: number;
+  _id: number;
   name: string;
   price: number;
   description: string;
-  src: string;
+  image: string;
 }
 export interface IButton {
   text: string;
