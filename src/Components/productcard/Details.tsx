@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import type { IDetails } from "interface/interface";
 import EditProduct from "Components/editproduct/EditProduct";
-
+export interface IProduct {
+  data: {
+    title: string;
+    description: string;
+    price: string;
+    details: string;
+    image: string;
+  };
+  url: string;
+}
 const Details: React.FC<IDetails> = ({
   id,
   name,

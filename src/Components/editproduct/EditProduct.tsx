@@ -1,19 +1,101 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePostEditProductMutation } from "redux/actions/services";
+import UploadImage from "Components/upload/UploadImage";
 
-export interface IProduct {
-  data: {
-    title: string;
-    description: string;
-    price: string;
-    details: string;
-    image: string;
-  };
-  url: string;
-}
-const EditProduct = () => {
-  return <div className="w-full">EditProduct</div>;
+const EditProduct: React.FC = () => {
+  const [file, setFile] = useState<string>("")
+  return (
+    <div className="w-full mx-auto p-3 bg-gallery">
+      <div className="w-full max-w-[800px] mt-[2rem] mx-auto">
+        <div className="w-[70%] mx-auto mb-5 text-center">
+          <h2 className="font-bold text-[1.5rem]">Edit product details</h2>
+          <p>kindly update the product details</p>
+        </div>
+        <form
+          className="w-[80%] mx-auto p-3 rounded-md border-[1px] border-button"
+          // onSubmit={submitHandler}
+        >
+          <div className="w-full my-8 flex justify-between">
+            <label htmlFor="email" className="basis-[15%]">
+              Title:
+            </label>
+            <input
+              type="text"
+              name="title"
+              placeholder="enter title"
+              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              minLength={4}
+              required
+              // onChange={changeHandler}
+            />
+          </div>
+          <div className="w-full my-8 flex justify-between">
+            <label htmlFor="password" className="basis-[15%]">
+              Description:
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="enter password"
+              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              minLength={5}
+              required
+              // onChange={changeHandler}
+            />
+          </div>
+          <div className="w-full my-8 flex justify-between">
+            <label htmlFor="password" className="basis-[15%]">
+              Price:
+            </label>
+            <input
+              type="number"
+              name="price"
+              placeholder="inser price"
+              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              required
+              // onChange={changeHandler}
+            />
+          </div>
+          <div className="w-full my-8 flex justify-between">
+            <label htmlFor="password" className="basis-[15%]">
+              Details:
+            </label>
+            <textarea
+              // type="text"
+              name="details"
+              placeholder="enter product details"
+              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              minLength={5}
+              required
+              // onChange={changeHandler}
+            ></textarea>
+          </div>
+          <div className="w-full my-8 flex justify-between">
+            <label htmlFor="password" className="basis-[15%]">
+              Image url:
+            </label>
+            <input
+              type="text"
+              name="image"
+              placeholder="paste image url"
+              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              minLength={5}
+              required
+              // onChange={changeHandler}
+            />
+          </div>
+          {file ? (<p>{file}</p>) : null}
+          <div>
+            <UploadImage setFile={setFile}/>
+          </div>
+          <button className="w-full my-8 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
+            update
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default EditProduct;
