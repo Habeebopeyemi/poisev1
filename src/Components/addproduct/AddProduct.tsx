@@ -33,7 +33,7 @@ const AddProduct = () => {
       });
   };
   return (
-    <div className="w-full mx-auto p-3 bg-gallery">
+    <div className="w-full h-[100vh] mx-auto p-3 bg-gallery">
       <div className="w-full max-w-[800px] mt-[2rem] mx-auto">
         <div className="w-[70%] mx-auto mb-5 text-center">
           <h2 className="font-bold text-[1.5rem]">

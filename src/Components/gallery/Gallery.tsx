@@ -14,7 +14,9 @@ const Gallery: React.FC = () => {
           Some of our "must have's"
         </h3>
         {isLoading ? (
-          <Spin size="large" />
+          <div className="w-[10%] mx-auto my-[30vh]">
+            <Spin size="large" />
+          </div>
         ) : (
           <div className="w-full mx-auto flex flex-wrap">
             {data.products.map((product: IProduct) => {

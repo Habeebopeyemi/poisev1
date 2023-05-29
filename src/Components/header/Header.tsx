@@ -16,14 +16,26 @@ const Header: React.FC = () => {
   return (
     <header className="w-full absolute z-10 top-0 left-0 bg-[rgba(255,255,255,0.7)]">
       <nav className="w-full p-3 md:flex justify-between">
-        <div className="flex justify-between md:basis-[10%]">
+        <div className="flex justify-between md:basis-[15%]">
           <img src={logo} alt="logo" />
           <div className="p-2 md:hidden">
             <RxHamburgerMenu className="text-xl" />
           </div>
         </div>
-        <div className="md:flex md:basis-[80%] justify-between">
-          <ul className="my-4 mr-2 basis-[40%] md:flex justify-between">
+        <div
+          className={
+            token
+              ? "md:flex md:basis-[80%] justify-between lg:basis-[70%] smax:basis-[65%]"
+              : "md:flex md:basis-[80%] justify-evenly"
+          }
+        >
+          <ul
+            className={
+              token
+                ? "my-4 mr-2 basis-[40%] md:flex justify-between lg:basis-[30%] smax:basis-[25%]"
+                : "my-4 mr-2 basis-[40%] md:flex justify-between lg:basis-[30%] smax:basis-[25%]"
+            }
+          >
             {header_info.map((info: ILinks) => {
               return (
                 <HeaderLink
@@ -34,23 +46,41 @@ const Header: React.FC = () => {
               );
             })}
           </ul>
-          <div className="w-[70%] md:my-2 flex">
-            <button className="w-[33%] mr-2 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
+          <div
+            className={
+              token
+                ? "lg:basis-[60%] smax:basis-[45%] flex"
+                : "w-[70%] md:my-2 flex md:basis-[30%] lg:basis-[25%] smax:basis-[20%]"
+            }
+          >
+            <button
+              className={
+                token
+                  ? "w-[33%] mr-2 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white"
+                  : "w-[50%]  bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3 md:w-full"
+              }
+            >
               Get in touch
             </button>
-            {token ? (
-              <>
-                <button className="w-[33%] bg-slate-200 p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
-                  <Link to="addproduct">Add product</Link>
-                </button>
-                <button
-                  className="w-[33%] bg-slate-200 p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
-                  onClick={handleSignOut}
-                >
-                  sign out
-                </button>
-              </>
-            ) : null}
+            <button
+              className={
+                token
+                  ? "w-[33%] bg-slate-200 p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
+                  : "hidden"
+              }
+            >
+              <Link to="addproduct">Add product</Link>
+            </button>
+            <button
+              className={
+                token
+                  ? "w-[33%] bg-slate-200 p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
+                  : "hidden"
+              }
+              onClick={handleSignOut}
+            >
+              sign out
+            </button>
           </div>
         </div>
       </nav>

@@ -30,7 +30,7 @@ export const poiseApi = createApi({
       }),
     }),
     postEditProduct: builder.mutation({
-      query: ({data, id}) => ({
+      query: ({ data, id }) => ({
         url: `products/product/${id}`,
         providesTags: ["Products,Edit"],
 
@@ -39,6 +39,12 @@ export const poiseApi = createApi({
         headers: { "Content-type": "application/json; charset=UTF-8" },
       }),
       invalidatesTags: ["Products"],
+    }),
+    postDeleteProduct: builder.mutation({
+      query: (id) => ({
+        url: `products/product/${id}`,
+        method: "DELETE",
+      }),
     }),
   }),
 });
@@ -49,4 +55,5 @@ export const {
   usePostSignedInMutation,
   usePostNewProductMutation,
   usePostEditProductMutation,
+  usePostDeleteProductMutation
 } = poiseApi;
