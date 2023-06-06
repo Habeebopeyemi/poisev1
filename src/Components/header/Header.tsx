@@ -56,8 +56,8 @@ const Header: React.FC = () => {
             <button
               className={
                 token
-                  ? "w-[33%] mr-2 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white"
-                  : "w-[50%]  bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3 md:w-full"
+                  ? "w-[33%] mr-2 bg-black text-button font-bold p-2 rounded-md hover:bg-button_hover hover:text-white"
+                  : "w-[50%] bg-black text-button font-bold p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3 md:w-full"
               }
             >
               Get in touch
@@ -65,16 +65,18 @@ const Header: React.FC = () => {
             <button
               className={
                 token
-                  ? "w-[33%] bg-slate-200 p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
+                  ? "w-[33%] bg-black text-button font-bold p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
                   : "hidden"
               }
             >
-              <Link to="addproduct">Add product</Link>
+              <Link to="addproduct">
+                <p className="w-full">Add product</p>
+              </Link>
             </button>
             <button
               className={
                 token
-                  ? "w-[33%] bg-slate-200 p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
+                  ? "w-[33%] bg-black text-button font-bold p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
                   : "hidden"
               }
               onClick={handleSignOut}

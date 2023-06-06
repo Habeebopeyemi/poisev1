@@ -21,6 +21,14 @@ export const poiseApi = createApi({
         headers: { "Content-type": "application/json" },
       }),
     }),
+    postSignedUp: builder.mutation({
+      query: (payload) => ({
+        url: "/auth/signup",
+        method: "PUT",
+        body: payload,
+        headers: { "Content-type": "application/json" },
+      }),
+    }),
     postNewProduct: builder.mutation({
       query: (payload) => ({
         url: `/products/postproduct`,
@@ -55,5 +63,6 @@ export const {
   usePostSignedInMutation,
   usePostNewProductMutation,
   usePostEditProductMutation,
-  usePostDeleteProductMutation
+  usePostDeleteProductMutation,
+  usePostSignedUpMutation
 } = poiseApi;

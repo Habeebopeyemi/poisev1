@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "Components/card/Card";
-import { Spin } from "antd";
-import { gallery } from "data";
+import type { PaginationProps } from "antd";
+import { Spin, Pagination } from "antd";
 import { useGetProductsQuery } from "redux/actions/services";
 import type { IProduct } from "interface/interface";
 const Gallery: React.FC = () => {
-  const { data, error, isLoading } = useGetProductsQuery("products");
-  console.log(data);
+  const [current, setPage] = useState(1);
+  const { data, isLoading } = useGetProductsQuery("products?page=" + current);
+  // console.log(data);
+  const onChange: PaginationProps["onChange"] = (page) => {
+    console.log(page);
+    setPage(page);
+  };
   return (
     <div className="w-full bg-gallery">
       <div className="w-[90%] mx-auto">
@@ -33,6 +38,14 @@ const Gallery: React.FC = () => {
             })}
           </div>
         )}
+        <div className="flex p-4">
+          <Pagination
+            current={current}
+            onChange={onChange}
+            total={data?.totalItems}
+            style={{ margin: "0 auto" }}
+          />
+        </div>
       </div>
     </div>
   );
