@@ -12,10 +12,10 @@ const App: React.FC = () => {
       <Header />
       <Slider />
       <Gallery />
-      <History/>
+      <History />
       <Social />
       <AboutUs />
-      <Footer/>
+      <Footer />
     </div>
   );
 };

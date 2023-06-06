@@ -13,7 +13,7 @@ const Gallery: React.FC = () => {
     setPage(page);
   };
   return (
-    <div className="w-full bg-gallery">
+    <div className="w-full bg-gallery" id="products">
       <div className="w-[90%] mx-auto">
         <h3 className="text-[2rem] font-bold py-6">
           Some of our "must have's"

@@ -127,7 +127,7 @@ const Details: React.FC<IDetails> = ({
             <div className="w-[75%] mx-auto p-3 rounded-md border-[1px] border-button md:w-[50%] lg:w-[70%] lg:mt-[7rem]">
               <QRCode
                 errorLevel="H"
-                value={"http://localhost:3000".concat(location.pathname)}
+                value={window.location.href}
                 icon="https://res.cloudinary.com/devhabeeb/image/upload/v1685395164/Copy_of_Poise_Logo-removebg-preview_1_aroq4m.svg"
                 size={300}
                 iconSize={100}

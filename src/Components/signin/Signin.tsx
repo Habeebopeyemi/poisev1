@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 import { usePostSignedInMutation } from "redux/actions/services";
 export interface ISignin {
@@ -21,16 +22,17 @@ const SignIn: React.FC = () => {
   };
   const payload: ISignin = {
     data: { email: adminInfo.email, password: adminInfo.password },
-    url: "products/credentials",
+    url: "auth/login",
   };
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     postSignedInMutation(payload)
       .unwrap()
       .then((res) => {
-        if (res.message) {
+        if (res.token) {
+          sessionStorage.setItem("token", res.token);
+          message.success(res.message);
           setStatus(res.message);
-          sessionStorage.setItem("token", "logged-in");
           navigate("/");
         }
       })

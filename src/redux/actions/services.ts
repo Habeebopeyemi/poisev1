@@ -26,7 +26,10 @@ export const poiseApi = createApi({
         url: "/auth/signup",
         method: "PUT",
         body: payload,
-        headers: { "Content-type": "application/json" },
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
       }),
     }),
     postNewProduct: builder.mutation({
@@ -34,7 +37,10 @@ export const poiseApi = createApi({
         url: `/products/postproduct`,
         method: "POST",
         body: payload,
-        headers: { "Content-type": "application/json" },
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
       }),
     }),
     postEditProduct: builder.mutation({
@@ -44,7 +50,10 @@ export const poiseApi = createApi({
 
         method: "PUT",
         body: data,
-        headers: { "Content-type": "application/json; charset=UTF-8" },
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
       }),
       invalidatesTags: ["Products"],
     }),
@@ -52,6 +61,7 @@ export const poiseApi = createApi({
       query: (id) => ({
         url: `products/product/${id}`,
         method: "DELETE",
+        headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` },
       }),
     }),
   }),
@@ -64,5 +74,5 @@ export const {
   usePostNewProductMutation,
   usePostEditProductMutation,
   usePostDeleteProductMutation,
-  usePostSignedUpMutation
+  usePostSignedUpMutation,
 } = poiseApi;
