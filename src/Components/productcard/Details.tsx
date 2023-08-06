@@ -59,7 +59,7 @@ const Details: React.FC<IDetails> = ({
           <div className="w-[100%] flex justify-between">
             <div className="basis-[80%]">
               <a
-                href="http://wa.me/+2348088880886"
+                href="https://api.whatsapp.com/send?phone=%2B2348134863130&data=AWDDf5Koqyhq8N84q1xVGsyGLRemGUVSYr3kmfDGJPbU6p0AXoZNMt5vBt0SOq2MofL3JDpah5HmJb2hQgq5eRe3YYPajwB6QHo-xmTEX9QGBN0xymnTzAAUKG2jlvr0-bzg3UJTz4-aWuJnHs2X_ErVNG7wCt5hTY4cEu0SRwa35zTRgYtjEZpEQ0e-oNkjuNIhrJMytQpjbjjuma0ZsfxiB0MEZUq1-LXDTsOF6A5ZVTcAxDE20vksG7YVY0BGyW5QN35-HP0ESeutPPAr5RpMgNwQksWtv30J2jfjd6VOb_jt8xs&source=FB_Page&app=facebook&entry_point=page_cta"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,7 +83,7 @@ const Details: React.FC<IDetails> = ({
           <p className="text-sm text-descr">
             To shop for this item, please send us a message on{" "}
             <a
-              href="https://www.instagram.com"
+              href="https://instagram.com/poise.ng?igshid=MmJiY2I4NDBkZg=="
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -92,7 +92,7 @@ const Details: React.FC<IDetails> = ({
             </a>{" "}
             or{" "}
             <a
-              href="https://www.twitter.com"
+              href="https://twitter.com/poise_OA?t=tmCrzzVxPMt9rp279q-I_Q&s=09"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"

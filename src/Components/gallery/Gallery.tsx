@@ -9,21 +9,20 @@ const Gallery: React.FC = () => {
   const { data, isLoading } = useGetProductsQuery("products?page=" + current);
   // console.log(data);
   const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
     setPage(page);
   };
   return (
     <div className="w-full bg-gallery" id="products">
-      <div className="w-[90%] mx-auto">
-        <h3 className="text-[2rem] font-bold py-6">
-          Some of our "must have's"
+      <div className="w-[95%] mx-auto lg:w-full">
+        <h3 className="text-[1.5rem] py-6">
+          Some of our <span className=" font-bold">"must have's"</span>
         </h3>
         {isLoading ? (
           <div className="w-[10%] mx-auto my-[30vh]">
             <Spin size="large" />
           </div>
         ) : (
-          <div className="w-full mx-auto flex flex-wrap">
+          <div className="w-full mx-auto flex flex-wrap gap-4 md:w-[87%] lg:w-full lg:gap-3 xl:w-[91%] xl:gap-6 border-2 border-white">
             {data.products.map((product: IProduct) => {
               return (
                 <Card

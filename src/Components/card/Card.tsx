@@ -12,14 +12,14 @@ const Card: React.FC<IItems> = ({
   // viewProductHandler,
 }) => {
   return (
-    <div className="bg-card p-3 rounded-md m-3 sm:max-w-[280px] md:max-w-[300px]">
+    <div className="w-full max-w-[400px] mx-auto bg-card p-3 rounded-md sm:max-w-[300px] sm:mx-0">
       <div key={id} className="w-full">
-        <div className="w-full mb-3 md:mb-4">
+        <div className="w-full h-[200px] mb-3 md:mb-4">
           <img
             src={src}
             alt=""
             loading="lazy"
-            className="w-[100%] rounded-t-md"
+            className="w-[100%] h-[100%] rounded-t-md"
           />
         </div>
         <div className="flex justify-between mb-3 md:mb-4">

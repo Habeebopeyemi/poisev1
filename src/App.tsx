@@ -6,15 +6,21 @@ import Social from "Components/social/Social";
 import AboutUs from "Components/about/AboutUs";
 import History from "Components/history/History";
 import Footer from "Components/footer/Footer";
+import UserStyle from "Components/style/style";
 const App: React.FC = () => {
   return (
-    <div className="w-full relative">
+    <div className="w-full bg-gallery relative">
       <Header />
       <Slider />
-      <Gallery />
-      <History />
-      <Social />
-      <AboutUs />
+      <div className="w-full bg-gallery lg:w-[95%] xl:w-[80%] mx-auto max-w-[1100px]">
+        <Gallery />
+        <div className="w-full mt-5 mb-8">
+          <UserStyle />
+        </div>
+        <Social />
+        <History />
+        <AboutUs />
+      </div>
       <Footer />
     </div>
   );

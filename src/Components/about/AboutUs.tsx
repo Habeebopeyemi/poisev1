@@ -6,7 +6,7 @@ const AboutUs: React.FC = () => {
     <div className="w-[90%] mx-auto mt-8" id="about">
       <div>
         <h4 className="my-3 font-bold text-lg">ABOUT US</h4>
-        <p className="text-md text-descr mb-3 leading-8">
+        <p className="text-md text-black mb-3 leading-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo
           dignissim quam arcu, a scelerisque. Ornare sagittis sed quis sed
           dignissim sed dictum suspendisse ultrices. Viverra amet, sed auctor

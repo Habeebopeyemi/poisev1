@@ -11,7 +11,7 @@ const Social: React.FC = () => {
   return (
     <div className="w-full">
       <div className="w-full mx-auto">
-        <h3 className="w-[90%] text-lg font-bold mt-3 mx-auto">
+        <h3 className="w-[90%] text-lg font-bold my-3 mx-auto">
           WHAT OUR CUSTOMERS ARE SAYING
         </h3>
         <div className="w-full h-[25vh] mb-1">

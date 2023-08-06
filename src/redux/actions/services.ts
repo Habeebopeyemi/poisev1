@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const poiseApi = createApi({
   reducerPath: "poiseApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.thisispoise.com/" }),
   tagTypes: ["Products", "Product", "Edit"],
   endpoints: (builder) => ({
     getProducts: builder.query({
