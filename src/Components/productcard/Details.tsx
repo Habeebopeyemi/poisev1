@@ -50,7 +50,7 @@ const Details: React.FC<IDetails> = ({
   return (
     <div>
       {/* <Header /> */}
-      <div className="max-w-[600px] border-[2px] border-slate-500 mx-auto mt-20 rounded-md md:max-w-[95%] lg:max-w-[970px] bg-gallery">
+      <div className="max-w-[400px] sm:max-w-[600px] border-[2px] border-slate-500 mx-auto mt-20 mb-[2.95rem] sm:mb-[5.75rem] md:mb-[14.8rem] rounded-md md:max-w-[95%] lg:max-w-[970px] bg-gallery">
         <p className="m-2 flex justify-between">
           <span></span>
           <Link to="/">
@@ -154,7 +154,7 @@ const Details: React.FC<IDetails> = ({
           </div>
         ) : null}
       </div>
-      <div className={token ? "w-full mt-10" : "w-full absolute bottom-0"}>
+      <div className="w-full mt-10">
         <Footer />
       </div>
     </div>

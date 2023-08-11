@@ -7,8 +7,6 @@ import "swiper/css/pagination";
 import "App.css";
 import { images_arr } from "data";
 
-
-
 const Slider: React.FC = () => {
   return (
     <>
