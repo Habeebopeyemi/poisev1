@@ -5,7 +5,6 @@ import { FaTimes } from "react-icons/fa";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import type { IDetails } from "interface/interface";
 import EditProduct from "Components/editproduct/EditProduct";
-import Header from "Components/header/Header";
 import Footer from "Components/footer/Footer";
 
 import { usePostDeleteProductMutation } from "redux/actions/services";
@@ -49,7 +48,6 @@ const Details: React.FC<IDetails> = ({
   };
   return (
     <div>
-      {/* <Header /> */}
       <div className="max-w-[400px] sm:max-w-[600px] border-[2px] border-slate-500 mx-auto mt-20 mb-[2.95rem] sm:mb-[5.75rem] md:mb-[14.8rem] rounded-md md:max-w-[95%] lg:max-w-[970px] bg-gallery">
         <p className="m-2 flex justify-between">
           <span></span>
