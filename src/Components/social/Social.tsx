@@ -9,7 +9,7 @@ import { feedback } from "data";
 
 const Social: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-[90%] mx-auto mt-8">
       <div className="w-full mx-auto">
         <h3 className="w-[90%] text-lg font-bold my-3 mx-auto">
           WHAT OUR CUSTOMERS ARE SAYING

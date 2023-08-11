@@ -14,12 +14,16 @@ const UserStyle = () => {
           <img
             src={stypo}
             alt="new_image_2"
-            className="w-full h-[100%] lg:translate-y-[-20px] lg:drop-shadow-xl"
+            className="w-full h-[100%] lg:translate-y-[-40px] lg:translate-x-[-20px] lg:drop-shadow-xl"
           />
         </div>
       </div>
       <div className="h-full basis-[50%] sm:basis-[30%]">
-        <img src={stypo1} alt="new_image_3" className="w-full h-[100%]" />
+        <img
+          src={stypo1}
+          alt="new_image_3"
+          className="w-full h-[100%] lg:translate-y-[-20px] lg:translate-x-[-40px] lg:drop-shadow-xl"
+        />
       </div>
     </div>
   );

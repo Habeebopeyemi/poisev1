@@ -7,15 +7,18 @@ import { useGetProductQuery } from "redux/actions/services";
 const ProductCard: React.FC = () => {
   let { id } = useParams();
   const { data, isLoading } = useGetProductQuery(id);
-  const token = sessionStorage.getItem("token")
+  const token = sessionStorage.getItem("token");
 
   return (
     <>
       <section
-        className={token ? "w-full bg-gallery p-4" : "w-full h-[100vh] bg-gallery p-4"}
+        className={token ? "w-full" : "w-full"}
       >
         {isLoading ? (
-          <Spin />
+          <div className="w-[20%] align-center mx-auto my-[50vh] text-center">
+            <Spin />
+            <p>Loading...</p>
+          </div>
         ) : (
           <Details
             id={data.product._id}
