@@ -136,7 +136,7 @@ const Details: React.FC<IDetails> = ({
           <div className="lg:flex">
             <EditProduct />
             <div className="w-full mx-auto p-3 bg-gallery">
-              <div className="w-[75%] mx-auto p-3 rounded-md border-[1px] border-button md:w-[50%] lg:w-[70%] lg:mt-[7rem]">
+              <div className="w-[95%] sm:w-[58%] mx-auto p-3 rounded-md border-[1px] border-button md:w-[50%] lg:w-[70%] lg:mt-[7rem]">
                 <QRCode
                   errorLevel="H"
                   // value={window.location.href}

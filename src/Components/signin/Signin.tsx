@@ -49,10 +49,10 @@ const SignIn: React.FC = () => {
           <p>kindly fill in the details to sign in</p>
         </div>
         <form
-          className="w-[70%] mx-auto p-3 rounded-md border-[1px] border-button"
+          className="w-full max-w-[400px] sm:w-[70%] mx-auto p-3 rounded-md border-[1px] border-button"
           onSubmit={submitHandler}
         >
-          <div className="w-full my-8 flex justify-between">
+          <div className="w-full my-8 sm:flex justify-between">
             <label htmlFor="email" className="basis-[15%]">
               Email:
             </label>
@@ -60,13 +60,13 @@ const SignIn: React.FC = () => {
               type="email"
               name="email"
               placeholder="enter email address"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-full sm:basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               min="4"
               required
               onChange={changeHandler}
             />
           </div>
-          <div className="w-full my-8 flex justify-between">
+          <div className="w-full my-8 sm:flex justify-between">
             <label htmlFor="password" className="basis-[15%]">
               Password:
             </label>
@@ -74,7 +74,7 @@ const SignIn: React.FC = () => {
               type="password"
               name="password"
               placeholder="enter password"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-full sm:basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
               onChange={changeHandler}

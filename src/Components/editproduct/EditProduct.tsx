@@ -1,7 +1,10 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Spin, message } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
-import { usePostEditProductMutation, usePostDeleteProductMutation } from "redux/actions/services";
+import {
+  usePostEditProductMutation,
+  usePostDeleteProductMutation,
+} from "redux/actions/services";
 import UploadImage from "Components/upload/UploadImage";
 
 const EditProduct: React.FC = () => {
@@ -44,8 +47,8 @@ const EditProduct: React.FC = () => {
           className="w-[80%] mx-auto p-3 rounded-md border-[1px] border-button"
           onSubmit={submitHandler}
         >
-          <div className="w-full my-8 flex justify-between">
-            <label htmlFor="email" className="basis-[15%]">
+          <div className="w-full my-8 md:flex justify-between">
+            <label htmlFor="email" className="inline-block w-[25%]">
               Title:
             </label>
             <input
@@ -58,8 +61,8 @@ const EditProduct: React.FC = () => {
               onChange={changeHandler}
             />
           </div>
-          <div className="w-full my-8 flex justify-between">
-            <label htmlFor="password" className="basis-[15%]">
+          <div className="w-full my-8 md:flex justify-between">
+            <label htmlFor="password" className="inline-block w-[25%]">
               Description:
             </label>
             <input
@@ -72,8 +75,8 @@ const EditProduct: React.FC = () => {
               onChange={changeHandler}
             />
           </div>
-          <div className="w-full my-8 flex justify-between">
-            <label htmlFor="password" className="basis-[15%]">
+          <div className="w-full my-8 md:flex justify-between">
+            <label htmlFor="password" className="inline-block w-[25%]">
               Price:
             </label>
             <input
@@ -85,22 +88,22 @@ const EditProduct: React.FC = () => {
               onChange={changeHandler}
             />
           </div>
-          <div className="w-full my-8 flex justify-between">
-            <label htmlFor="password" className="basis-[15%]">
+          <div className="w-full my-8 md:flex justify-between">
+            <label htmlFor="password" className="inline-block w-[25%]">
               Details:
             </label>
             <textarea
               // type="text"
               name="details"
               placeholder="enter product details"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-[90%] sm:inline-block sm:w-[58%] md:w-[78%] lg:w-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
               onChange={changeHandler}
-            ></textarea>
+            />
           </div>
-          <div className="w-full my-8 flex justify-between">
-            <label htmlFor="password" className="basis-[15%]">
+          <div className="w-full my-8 md:flex justify-between">
+            <label htmlFor="password" className="inline-block w-[25%]">
               Image url:
             </label>
             <input
