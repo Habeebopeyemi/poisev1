@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { message, Popconfirm, QRCode } from "antd";
 import { FaTimes } from "react-icons/fa";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
@@ -28,7 +28,6 @@ const Details: React.FC<IDetails> = ({
 }) => {
   const token = sessionStorage.getItem("token");
   const navigate = useNavigate();
-  const location = useLocation();
   const [postDeleteMutation] = usePostDeleteProductMutation();
   const confirm = () => {
     postDeleteMutation(id)
@@ -42,8 +41,6 @@ const Details: React.FC<IDetails> = ({
       });
   };
   const cancel = () => {
-    console.log(location);
-
     message.error("Thanks for reconsidering");
   };
   return (
@@ -142,10 +139,11 @@ const Details: React.FC<IDetails> = ({
               <div className="w-[75%] mx-auto p-3 rounded-md border-[1px] border-button md:w-[50%] lg:w-[70%] lg:mt-[7rem]">
                 <QRCode
                   errorLevel="H"
-                  value={window.location.href}
+                  // value={window.location.href}
+                  value={`https://thisispoise.com`}
                   icon="https://res.cloudinary.com/devhabeeb/image/upload/v1685395164/Copy_of_Poise_Logo-removebg-preview_1_aroq4m.svg"
                   size={300}
-                  iconSize={100}
+                  iconSize={50}
                 />
               </div>
             </div>
@@ -160,3 +158,4 @@ const Details: React.FC<IDetails> = ({
 };
 
 export default Details;
+/**https://thisispoise.com/ */
