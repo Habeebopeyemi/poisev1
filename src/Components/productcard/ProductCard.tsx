@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Spin } from "antd";
 import Details from "./Details";
 import { useGetProductQuery } from "redux/actions/services";
+import Footer from "Components/footer/Footer";
 
 const ProductCard: React.FC = () => {
   let { id } = useParams();
@@ -11,9 +12,7 @@ const ProductCard: React.FC = () => {
 
   return (
     <>
-      <section
-        className={token ? "w-full" : "w-full"}
-      >
+      <section className={token ? "w-full" : "w-full"}>
         {isLoading ? (
           <div className="w-[20%] align-center mx-auto my-[50vh] text-center">
             <Spin />
@@ -29,6 +28,9 @@ const ProductCard: React.FC = () => {
             details={data.product.details}
           />
         )}
+        <div className="w-full mt-10">
+          <Footer />
+        </div>
       </section>
     </>
   );

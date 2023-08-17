@@ -150,9 +150,7 @@ const Details: React.FC<IDetails> = ({
           </div>
         ) : null}
       </div>
-      <div className="w-full mt-10">
-        <Footer />
-      </div>
+   
     </div>
   );
 };
