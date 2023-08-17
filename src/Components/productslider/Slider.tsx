@@ -23,7 +23,10 @@ const Slider: React.FC = () => {
           {images_arr.map((pic: IImage) => {
             return (
               <SwiperSlide key={pic.id}>
+                <div className="swiper-img-wrapper">
+
                 <img src={pic.src} alt={pic.alt} loading="lazy" />
+                </div>
               </SwiperSlide>
             );
           })}
