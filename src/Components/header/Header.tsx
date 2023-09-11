@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   }, [size.width > 768]);
   return (
     <header className="w-full absolute z-10 top-0 left-0 bg-[rgba(255,255,255,0.7)]">
-      <nav className="w-full p-3 md:flex justify-between">
+      <nav className="w-full p-3 md:flex justify-between" id="nav">
         <div className="flex justify-between md:basis-[15%]">
           <img src={logo} alt="logo" />
           <div
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get in touch
+                  Get in Touch
                 </a>
               </button>
               <button
@@ -107,69 +107,6 @@ const Header: React.FC = () => {
             </div>
           </div>
         ) : null}
-        {/* <div
-          className={
-            token
-              ? "md:flex md:basis-[80%] justify-between lg:basis-[70%] smax:basis-[65%]"
-              : "md:flex md:basis-[80%] justify-evenly"
-          }
-        >
-          <ul
-            className={
-              token
-                ? "my-4 mr-2 basis-[40%] md:flex justify-between lg:basis-[30%] smax:basis-[25%]"
-                : "my-4 mr-2 basis-[40%] md:flex justify-between lg:basis-[30%] smax:basis-[25%]"
-            }
-          >
-            {header_info.map((info: ILinks) => {
-              return (
-                <HeaderLink
-                  key={info.id}
-                  text={info.text}
-                  location={info.location}
-                />
-              );
-            })}
-          </ul>
-          <div
-            className={
-              token
-                ? "lg:basis-[60%] smax:basis-[45%] flex"
-                : "w-[70%] md:my-2 flex md:basis-[30%] lg:basis-[25%] smax:basis-[20%]"
-            }
-          >
-            <button
-              className={
-                token
-                  ? "w-[33%] mr-2 bg-black text-button font-bold p-2 rounded-md hover:bg-button_hover hover:text-white"
-                  : "w-[50%] bg-black text-button font-bold p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3 md:w-full"
-              }
-            >
-              Get in touch
-            </button>
-            <button
-              className={
-                token
-                  ? "w-[33%] bg-black text-button font-bold p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
-                  : "hidden"
-              }
-            >
-              <Link to="addproduct">
-                <p className="w-full">Add product</p>
-              </Link>
-            </button>
-            <button
-              className={
-                token
-                  ? "w-[33%] bg-black text-button font-bold p-2 mr-2 rounded-md hover:bg-button_hover hover:text-white md:p-3"
-                  : "hidden"
-              }
-              onClick={handleSignOut}
-            >
-              sign out
-            </button>
-          </div>
-        </div> */}
       </nav>
     </header>
   );

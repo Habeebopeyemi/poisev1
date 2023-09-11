@@ -34,7 +34,7 @@ const Card: React.FC<IItems> = ({
           Read more
         </a>
         <Link to={`product/${id}`}>
-          <Button text={"View Product"} />
+          <Button text={"View Product"} className="font-[800]" />
         </Link>
       </div>
     </div>

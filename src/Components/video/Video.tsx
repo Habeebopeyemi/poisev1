@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import video from "../../assets/video/video1.mp4";
+import video from "../../assets/video/Reel.mp4";
 import VideoPlayerHook from "hooks/VideoPlayerHook";
 import { BsPause, BsPlay, BsVolumeUp, BsVolumeMute } from "react-icons/bs";
 
@@ -14,7 +14,7 @@ const Video: React.FC = () => {
     toggleMute,
   } = VideoPlayerHook(videoElement);
   return (
-    <div className="container">
+    <div className="container bg-black border-2 border-orange-400">
       <div className="video-wrapper">
         <video
           src={video}

@@ -11,7 +11,7 @@ export const header_info = [
   {
     id: 1,
     location: "#about",
-    text: "About us",
+    text: "About Us",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const header_info = [
   {
     id: 3,
     location: "#contact",
-    text: "Contact us",
+    text: "Contact Us",
   },
 ];
 
@@ -119,128 +119,34 @@ export const gallery = [
 export const feedback = [
   {
     id: Math.random() * 200,
-    handle: "@mehxii",
+    handle: "- Eboreime AK.",
     comment:
-      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+      "The product is very good and your packaging is also very nice. It's been long since I have gotten value for money paid for an item.Thank you. Also,your customer service is very good. Please keep it up.",
     src: social1,
     platform: platform1,
   },
   {
     id: Math.random() * 200,
-    handle: "@mehxii",
+    handle: "- Mr. Sam.",
     comment:
-      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+      "I received it, and it’s lovely.  It’s my first time trying a Nigeria-made bag.",
     src: social2,
     platform: platform2,
   },
   {
     id: Math.random() * 200,
-    handle: "@mehxii",
+    handle: "- King Roms.",
     comment:
-      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+      "Good evening. The products are good. And I haven't had issues with the zipper or leather either. I like the purse.",
     src: social1,
     platform: platform1,
   },
   {
     id: Math.random() * 200,
-    handle: "@mehxii",
+    handle: "- Ginikachukwu Tagbo.",
     comment:
-      "Getting a leather bag from @poise.OA is the best decision I made in 2022. If you plan on going on those vacations, you better reach out to them to get your travel bags. This is no cap.",
+      "Ah! You guys are too much. I just got the package and I'm honestly shocked. This has to be the best branding I've seen in a very long time. I'm happy I patronized you guys. And with this I'm definitely coming back for more. Well done.",
     src: social2,
     platform: platform2,
-  },
-];
-export const product_details = [
-  {
-    id: 0,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product1,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 1,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product2,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-
-  {
-    id: 2,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product4,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 3,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product5,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 4,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product1,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 5,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product2,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-
-  {
-    id: 6,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product4,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 7,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product5,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
-  },
-  {
-    id: 8,
-    name: "Poise leather purse",
-    price: 370,
-    description:
-      "A brief description of the product is written here,Examples are how the name was coined, what the product is made up of . Tellus urna metus orci, turpis integer lacus. Vivamus ultrices a arcu leo, varius blandit egestas. Malesuada libero nunc pretium commodo amet. Suspendisse sem mi fusce nunc dapibus. ",
-    src: product5,
-    details:
-      "Measurement and weight of product is inserted here. The duration for delivery and the return policy for this product is included here.",
   },
 ];

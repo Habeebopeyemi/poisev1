@@ -30,6 +30,7 @@ export interface IProduct {
 export interface IButton {
   text: string;
   onclick?: () => void;
+  className?: string;
 }
 export interface IDetails {
   id: number;
