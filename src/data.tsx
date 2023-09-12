@@ -1,5 +1,5 @@
-import product1 from "assets/img/IMG_0357 1.png";
-import product2 from "assets/img/IMG_7845 1.png";
+import product1 from "assets/img/charisma.png";
+import product2 from "assets/img/class.png";
 import product4 from "assets/img/JPG 1.png";
 import product5 from "assets/img/JPG 2.png";
 
