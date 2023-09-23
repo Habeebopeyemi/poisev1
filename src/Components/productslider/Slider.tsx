@@ -10,7 +10,7 @@ import { images_arr } from "data";
 const Slider: React.FC = () => {
   return (
     <>
-      <div className="w-full h-[70vh]">
+      <div className="w-full h-[40vh] sm:h-[50vh] md:h-[70vh]">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -24,8 +24,7 @@ const Slider: React.FC = () => {
             return (
               <SwiperSlide key={pic.id}>
                 <div className="swiper-img-wrapper">
-
-                <img src={pic.src} alt={pic.alt} loading="lazy" />
+                  <img src={pic.src} alt={pic.alt} loading="lazy" />
                 </div>
               </SwiperSlide>
             );

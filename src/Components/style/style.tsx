@@ -14,7 +14,7 @@ const UserStyle = () => {
           <img
             src={stypo}
             alt="new_image_2"
-            className="w-full h-[100%] lg:translate-y-[-40px] lg:translate-x-[-20px] lg:drop-shadow-xl"
+            className="w-full h-[100%] 2xl:translate-y-[-40px] 2xl:translate-x-[-20px] 2xl:drop-shadow-xl"
           />
         </div>
       </div>
@@ -22,7 +22,7 @@ const UserStyle = () => {
         <img
           src={stypo1}
           alt="new_image_3"
-          className="w-full h-[100%] lg:translate-y-[-20px] lg:translate-x-[-40px] lg:drop-shadow-xl"
+          className="w-full h-[100%] 2xl:translate-y-[-20px] 2xl:translate-x-[-40px] 2xl:drop-shadow-xl"
         />
       </div>
     </div>

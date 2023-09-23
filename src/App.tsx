@@ -12,7 +12,7 @@ const App: React.FC = () => {
     <div className="w-full bg-gallery relative">
       <Header />
       <Slider />
-      <div className="w-full bg-gallery lg:w-[95%] xl:w-[80%] mx-auto max-w-[1500px]">
+      <div className="w-full bg-gallery xl:w-[80%] mx-auto max-w-[1500px]">
         <Gallery />
         <div className="w-[90%] mx-auto mt-8">
           <UserStyle />
