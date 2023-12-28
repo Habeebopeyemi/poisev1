@@ -30,7 +30,7 @@ const UploadImage: React.FC<IDocumentUploadProps> = ({ setFile }) => {
 
   const props = {
     name: "file",
-    action: "http://localhost:8080/products/image",
+    action: "https://api.thisispoise.com/products/image",
     headers: {
       authorization: `Bearer ${sessionStorage.getItem("token")}`,
       // "Content-Type": "multipart/form-data",
