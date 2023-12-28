@@ -77,7 +77,7 @@ export const feedback = [
     id: Math.random() * 200,
     handle: "- Ginikachukwu Tagbo.",
     comment:
-      "Ah! You guys are too much. I just got the package and I'm honestly shocked. This has to be the best branding I've seen in a very long time. I'm happy I patronized you guys. And with this I'm definitely coming back for more. Well done.",
+      "Ah! You guys are too much. I just got the package and I'm honestly shocked. This has to be the best branding I've seen in a very long time. I'm happy I patronized you guys.",
     src: social2,
     platform: platform2,
   },

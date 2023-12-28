@@ -53,28 +53,28 @@ const SignIn: React.FC = () => {
           onSubmit={submitHandler}
         >
           <div className="w-full my-8 sm:flex justify-between">
-            <label htmlFor="email" className="basis-[15%]">
+            <label htmlFor="email" className="basis-[13%] mr-2">
               Email:
             </label>
             <input
               type="email"
               name="email"
               placeholder="enter email address"
-              className="block w-full sm:basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               min="4"
               required
               onChange={changeHandler}
             />
           </div>
           <div className="w-full my-8 sm:flex justify-between">
-            <label htmlFor="password" className="basis-[15%]">
+            <label htmlFor="password" className="basis-[13%] mr-2">
               Password:
             </label>
             <input
               type="password"
               name="password"
               placeholder="enter password"
-              className="block w-full sm:basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
               onChange={changeHandler}
@@ -86,13 +86,13 @@ const SignIn: React.FC = () => {
             </p>
           )}
           <button className="w-full my-8 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
-            sign in
+            Sign in
           </button>
           <button
             className="w-full p-2 rounded-md underline md:p-3"
             onClick={() => navigate("/signup")}
           >
-            create
+            Create
           </button>
         </form>
       </div>

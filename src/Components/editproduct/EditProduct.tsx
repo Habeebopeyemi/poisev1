@@ -55,7 +55,7 @@ const EditProduct: React.FC = () => {
               type="text"
               name="title"
               placeholder="enter title"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
               onChange={changeHandler}
@@ -69,7 +69,7 @@ const EditProduct: React.FC = () => {
               type="description"
               name="description"
               placeholder="enter description"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
               onChange={changeHandler}
@@ -83,7 +83,7 @@ const EditProduct: React.FC = () => {
               type="number"
               name="price"
               placeholder="inser price"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               required
               onChange={changeHandler}
             />
@@ -96,7 +96,7 @@ const EditProduct: React.FC = () => {
               // type="text"
               name="details"
               placeholder="enter product details"
-              className="block w-[90%] sm:inline-block sm:w-[58%] md:w-[78%] lg:w-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="block w-[90%] sm:inline-block sm:w-[58%] md:w-[78%] lg:w-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
               onChange={changeHandler}
@@ -110,7 +110,7 @@ const EditProduct: React.FC = () => {
               type="text"
               name="image"
               placeholder="paste image url"
-              className="basis-[80%] bg-transparent text-center border-b-[1px] border-button focus:outline-none focus:bg-transparent"
+              className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
               onChange={changeHandler}
