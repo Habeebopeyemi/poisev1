@@ -24,15 +24,15 @@ const Card: React.FC<IItems> = ({
         </div>
         <div className="flex justify-between mb-3 md:mb-4">
           <h3 className="text-title font-bold sm:text-xl">{name}</h3>
-          <p className="font-bold sm:text-xl">${price}</p>
+          <p className="font-bold sm:text-xl">&#8358;{price}</p>
         </div>
         <p className="text-descr mb-3 md:mb-4">{description}</p>
-        <a
+        {/* <a
           href={`product/${id}`}
           className="block text-xs mb-3 underline md:mb-4"
         >
           Read more
-        </a>
+        </a> */}
         <Link to={`product/${id}`}>
           <Button text={"View Product"} className="font-[800]" />
         </Link>

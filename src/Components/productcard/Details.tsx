@@ -86,7 +86,7 @@ const Details: React.FC<IDetails> = ({
           <div className="basis-[40%]">
             <div className="flex justify-between my-3">
               <h2 className=" text-xl font-[500]">{name}</h2>
-              <span className="font-bold text-xl">${price}</span>
+              <span className="font-bold text-xl">&#8358;{price}</span>
             </div>
             <p className="text-sm text-descr leading-6">{description}</p>
             <h3 className="text-lg mt-3 font-[500]">Product Details</h3>
@@ -150,7 +150,6 @@ const Details: React.FC<IDetails> = ({
           </div>
         ) : null}
       </div>
-   
     </div>
   );
 };
