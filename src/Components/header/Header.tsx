@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get in Touch
+                  Get in touch
                 </a>
               </button>
               <button

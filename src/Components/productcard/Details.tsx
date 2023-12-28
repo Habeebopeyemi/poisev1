@@ -80,7 +80,9 @@ const Details: React.FC<IDetails> = ({
                   </button>
                 </a>
               </div>
-              <span className="font-bold text-sm my-2 p-2">ID:{id}</span>
+              {token ? (
+                <span className="font-bold text-sm my-2 p-2">ID:{id}</span>
+              ) : null}
             </div>
           </div>
           <div className="basis-[40%]">
