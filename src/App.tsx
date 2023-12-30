@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <Slider />
       <div className="w-full bg-gallery xl:w-[80%] mx-auto max-w-[1500px]">
         <Gallery />
-        <div className="w-[90%] mx-auto mt-8">
+        <div className="w-[90%] lg:w-[100%] xl:w-[90%] mx-auto mt-8">
           <UserStyle />
         </div>
         <Social />

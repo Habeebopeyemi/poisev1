@@ -27,6 +27,11 @@ module.exports = {
           "url('https://i.ebayimg.com/images/g/QvQAAOSwvixgINGo/s-l1600.jpg')",
       },
     },
+    keyframes: {
+      shimmer: {
+        "100%": { transform: "translateX(100%)" },
+      },
+    },
   },
   plugins: [],
 };

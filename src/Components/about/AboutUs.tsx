@@ -1,9 +1,9 @@
 import React from "react";
-import Video from "Components/video/Video";
+// import Video from "Components/video/Video";
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="w-[90%] mx-auto mt-8 text-center" id="about">
+    <div className="w-[90%] mx-auto mt-8 mb-8 text-center" id="about">
       <div>
         <h4 className="my-3 font-bold text-lg">ABOUT US</h4>
         <p className="text-md text-black mb-3 leading-8">
@@ -21,9 +21,9 @@ const AboutUs: React.FC = () => {
           .
         </p>
       </div>
-      <div className="mb-1">
+      {/* <div className="mb-1">
         <Video />
-      </div>
+      </div> */}
     </div>
   );
 };

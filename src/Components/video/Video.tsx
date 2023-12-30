@@ -14,7 +14,7 @@ const Video: React.FC = () => {
     toggleMute,
   } = VideoPlayerHook(videoElement);
   return (
-    <div className="container bg-black border-2 border-orange-400">
+    <div className=" bg-black border-2 border-orange-400">
       <div className="video-wrapper">
         <video
           src={video}

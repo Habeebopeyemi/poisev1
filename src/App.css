@@ -41,7 +41,7 @@
   width: 90%;
 }
 .swiper-pagination-bullet-active {
-  background-color: orange;
+  background-color: #ffa500;
   width: 2rem;
   height: 0.5rem;
   border-radius: 3px;
@@ -151,6 +151,28 @@ input[type="range"]::-webkit-range-progress {
   background-color: none;
   color: white;
   font-size: 20px;
+}
+
+/* Create a CSS file or add this to your existing CSS */
+/* Modify the colors as needed */
+.ant-pagination {
+  .ant-pagination-item-link {
+    color: #ffa500;
+  }
+
+  .ant-pagination-item-link:hover {
+    color: white;
+  }
+
+  .ant-pagination-item-active {
+    border-color: #ffa500;
+    background-color: black;
+    color: #ffa500;
+  }
+
+  .ant-pagination-item-active a {
+    color: #ffa500;
+  }
 }
 
 @media screen and (min-width: 768px) {

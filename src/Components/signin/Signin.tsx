@@ -12,7 +12,7 @@ export interface ISignin {
 const SignIn: React.FC = () => {
   const [adminInfo, setAdminInfo] = useState({ email: "", password: "" });
   const [status, setStatus] = useState("");
-  const [postSignedInMutation, { error, isLoading }] =
+  const [postSignedInMutation] =
     usePostSignedInMutation();
   const navigate = useNavigate();
 

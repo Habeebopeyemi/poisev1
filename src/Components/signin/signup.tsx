@@ -15,7 +15,7 @@ const SignUp: React.FC = () => {
     adminname: "",
   });
   const [status, setStatus] = useState("");
-  const [postSignedUpMutation, { error, isLoading }] =
+  const [postSignedUpMutation] =
     usePostSignedUpMutation();
   const navigate = useNavigate();
 

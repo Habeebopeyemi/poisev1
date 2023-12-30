@@ -3,7 +3,6 @@ import { Spin, message } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   usePostEditProductMutation,
-  usePostDeleteProductMutation,
 } from "redux/actions/services";
 import UploadImage from "Components/upload/UploadImage";
 

@@ -5,7 +5,6 @@ import { FaTimes } from "react-icons/fa";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import type { IDetails } from "interface/interface";
 import EditProduct from "Components/editproduct/EditProduct";
-import Footer from "Components/footer/Footer";
 
 import { usePostDeleteProductMutation } from "redux/actions/services";
 export interface IProduct {

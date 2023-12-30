@@ -12,7 +12,7 @@ import { BsWhatsapp, BsInstagram, BsTwitter } from "react-icons/bs";
 const Footer: React.FC = () => {
   let year = new Date().getFullYear();
   return (
-    <div className="w-full relative bg-black text-button p-3" id="contact">
+    <div className="w-full relative bg-black text-[#ffa500] p-3" id="contact">
       <div className="w-full mb-5">
         <div className="w-[50%] mx-auto mb-3 sm:basis-[50%] text-center">
           <h6 className="text-[14px] sm:text-xl font-bold lg:text-3xl">
