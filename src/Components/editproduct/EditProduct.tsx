@@ -40,7 +40,7 @@ const EditProduct: React.FC = () => {
       <div className="w-full max-w-[800px] mt-[2rem] mx-auto">
         <div className="w-[70%] mx-auto mb-5 text-center">
           <h2 className="font-bold text-[1.5rem]">Edit product details</h2>
-          <p>kindly update the product details</p>
+          <p>Kindly update the product details</p>
         </div>
         <form
           className="w-[80%] mx-auto p-3 rounded-md border-[1px] border-button"
@@ -53,7 +53,7 @@ const EditProduct: React.FC = () => {
             <input
               type="text"
               name="title"
-              placeholder="enter title"
+              placeholder="Enter title"
               className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
@@ -67,7 +67,7 @@ const EditProduct: React.FC = () => {
             <input
               type="description"
               name="description"
-              placeholder="enter description"
+              placeholder="Enter description"
               className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
@@ -81,7 +81,7 @@ const EditProduct: React.FC = () => {
             <input
               type="number"
               name="price"
-              placeholder="inser price"
+              placeholder="Insert price"
               className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               required
               onChange={changeHandler}
@@ -94,7 +94,7 @@ const EditProduct: React.FC = () => {
             <textarea
               // type="text"
               name="details"
-              placeholder="enter product details"
+              placeholder="Enter product details"
               className="block w-[90%] sm:inline-block sm:w-[58%] md:w-[78%] lg:w-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
@@ -108,7 +108,7 @@ const EditProduct: React.FC = () => {
             <input
               type="text"
               name="image"
-              placeholder="paste image url"
+              placeholder="Paste image url"
               className="basis-[80%] bg-transparent  border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={5}
               required
