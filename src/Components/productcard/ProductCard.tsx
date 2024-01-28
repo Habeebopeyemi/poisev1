@@ -14,7 +14,7 @@ const ProductCard: React.FC = () => {
     <>
       <section className={token ? "w-full" : "w-full"}>
         {isLoading ? (
-          <div className="w-full align-center mx-auto my-[50vh] text-center">
+          <div className="w-full align-center mx-auto my-[50vh] text-center overflow-hidden">
             <DetailsSkeleton />
           </div>
         ) : (

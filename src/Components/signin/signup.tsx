@@ -53,7 +53,7 @@ const SignUp: React.FC = () => {
           <h2 className="font-bold text-[1.5rem]">
             Create a new Administrator
           </h2>
-          <p>kindly fill in the details to create a new admin</p>
+          <p>Kindly fill in the details to create a new admin</p>
         </div>
         <form
           className="w-full max-w-[400px] sm:w-[70%] mx-auto p-3 rounded-md border-[1px] border-button"
@@ -66,7 +66,7 @@ const SignUp: React.FC = () => {
             <input
               type="email"
               name="email"
-              placeholder="enter email address"
+              placeholder="Enter email address"
               className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               min="4"
               required
@@ -80,7 +80,7 @@ const SignUp: React.FC = () => {
             <input
               type="password"
               name="password"
-              placeholder="enter password"
+              placeholder="Enter password"
               className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
@@ -94,7 +94,7 @@ const SignUp: React.FC = () => {
             <input
               type="text"
               name="adminname"
-              placeholder="enter admin name"
+              placeholder="Enter admin name"
               className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required

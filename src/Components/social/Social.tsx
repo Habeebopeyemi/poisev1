@@ -14,7 +14,7 @@ const Social: React.FC = () => {
         <h3 className="w-[90%] text-lg text-center font-bold my-3 mx-auto">
           WHAT OUR CUSTOMERS ARE SAYING
         </h3>
-        <div className="w-full h-[25vh] mb-1">
+        <div className="w-full h-[30vh] sm:h-[22vh] md:h-[20vh] midmax:h-[15vh] lg:h-[35vh] xl:h-[30vh] mb-1">
           <Swiper
             slidesPerView={"auto"}
             spaceBetween={3}

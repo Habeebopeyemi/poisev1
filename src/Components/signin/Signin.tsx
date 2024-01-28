@@ -12,8 +12,8 @@ export interface ISignin {
 const SignIn: React.FC = () => {
   const [adminInfo, setAdminInfo] = useState({ email: "", password: "" });
   const [status, setStatus] = useState("");
-  const [postSignedInMutation] =
-    usePostSignedInMutation();
+  const [isLoading, setIsLoading] = useState(false);
+  const [postSignedInMutation] = usePostSignedInMutation();
   const navigate = useNavigate();
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -26,6 +26,7 @@ const SignIn: React.FC = () => {
   };
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     postSignedInMutation(payload)
       .unwrap()
       .then((res) => {
@@ -33,11 +34,13 @@ const SignIn: React.FC = () => {
           sessionStorage.setItem("token", res.token);
           message.success(res.message);
           setStatus(res.message);
+          setIsLoading(false);
           navigate("/");
         }
       })
       .catch((error) => {
         setStatus("error");
+        setIsLoading(false);
         // console.log("Error occurred:", error);
       });
   };
@@ -46,7 +49,7 @@ const SignIn: React.FC = () => {
       <div className="w-full max-w-[800px] mt-[5rem] mx-auto">
         <div className="w-[70%] mx-auto mb-5 text-center">
           <h2 className="font-bold text-[1.5rem]">Welcome back Poise Admin</h2>
-          <p>kindly fill in the details to sign in</p>
+          <p>Kindly fill in the details to sign in</p>
         </div>
         <form
           className="w-full max-w-[400px] sm:w-[70%] mx-auto p-3 rounded-md border-[1px] border-button"
@@ -59,7 +62,7 @@ const SignIn: React.FC = () => {
             <input
               type="email"
               name="email"
-              placeholder="enter email address"
+              placeholder="Enter email address"
               className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               min="4"
               required
@@ -73,7 +76,7 @@ const SignIn: React.FC = () => {
             <input
               type="password"
               name="password"
-              placeholder="enter password"
+              placeholder="Enter password"
               className="block w-full sm:basis-[80%] bg-transparent border-b-[1px] border-button focus:outline-none focus:bg-transparent"
               minLength={4}
               required
@@ -86,7 +89,7 @@ const SignIn: React.FC = () => {
             </p>
           )}
           <button className="w-full my-8 bg-button p-2 rounded-md hover:bg-button_hover hover:text-white md:p-3">
-            Sign in
+            {isLoading ? "Loading..." : "Sign in"}
           </button>
           <button
             className="w-full p-2 rounded-md underline md:p-3"

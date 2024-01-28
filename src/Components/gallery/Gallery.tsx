@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
             Feed your eyes
           </h3>
           {isLoading ? (
-            <div className="w-full mx-auto flex justify-center flex-wrap gap-4 md:w-[87%] lg:w-full lg:gap-3 xl:gap-6">
+            <div className="w-full mx-auto flex justify-center flex-wrap gap-4 md:w-[87%] lg:w-full lg:gap-3 xl:gap-6 overflow-hidden">
               {Array.from({ length: 8 }, () => null).map((arr, i) => {
                 return <Skeleton key={i} />;
               })}

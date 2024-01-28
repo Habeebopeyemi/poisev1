@@ -10,7 +10,7 @@ import { images_arr } from "data";
 const Slider: React.FC = () => {
   return (
     <>
-      <div className="w-full h-[40vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh]">
+      <div className="w-full h-[40vh] xsmx:h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] xl:h-[85vh]">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
